@@ -303,7 +303,6 @@ void normalization(vector<double>& record) {//归一化
 
 void checkT(const double& t,const int& n) {//t为计算得到的t值，n为自由度(样本量-1)
 	const double a = abs(t);
-	cout << "说明：可以拒绝均值之间没有差异的原假设的alpha水平越小，犯错的概率越小，意味着两组数据均值差异越大。如果在0.2的alpha水平下仍无法拒绝原假设，则两组数据均值之间的差异非常小。一般如果能在0.05的alpha水平下拒绝原假设则认为证据是有力的" << endl;
 	switch (n) {
 	case 1:
 		if (a<3.078) {
@@ -1178,7 +1177,9 @@ void csvResult0point2no() {
 	initgraph(1000, 600, 1);
 	HWND hn = GetHWnd();
 	SetWindowText(hn, L"可视化结果");
-	outtextxy(500, 300, L"在0.2的alpha水平下，无法拒绝均值之间没有差异的原假设");
+	outtextxy(10, 50, L"说明：可以拒绝均值之间没有差异的原假设的alpha水平越小，犯错的概率越小，意味着两组数据均值差异越大。如果在0.2的alpha水平下");
+	outtextxy(10, 65, L"仍无法拒绝原假设，则两组数据均值之间的差异非常小。一般如果能在0.05的alpha水平下拒绝原假设则认为证据是有力的");
+	outtextxy(280, 300, L"在0.2的alpha水平下，无法拒绝均值之间没有差异的原假设");
 	system("pause");
 	closegraph();
 }
@@ -1187,7 +1188,9 @@ void csvResult0point2yes() {
 	initgraph(1000, 600, 1);
 	HWND hn = GetHWnd();
 	SetWindowText(hn, L"可视化结果");
-	outtextxy(500, 300, L"在0.2的alpha水平下，可以拒绝均值之间没有差异的原假设");
+	outtextxy(10, 50, L"说明：可以拒绝均值之间没有差异的原假设的alpha水平越小，犯错的概率越小，意味着两组数据均值差异越大。如果在0.2的alpha水平下");
+	outtextxy(10, 65, L"仍无法拒绝原假设，则两组数据均值之间的差异非常小。一般如果能在0.05的alpha水平下拒绝原假设则认为证据是有力的");
+	outtextxy(280, 300, L"在0.2的alpha水平下，可以拒绝均值之间没有差异的原假设");
 	system("pause");
 	closegraph();
 }
@@ -1196,7 +1199,9 @@ void csvResult0point1() {
 	initgraph(1000, 600, 1);
 	HWND hn = GetHWnd();
 	SetWindowText(hn, L"可视化结果");
-	outtextxy(500, 300, L"在0.1的alpha水平下，可以拒绝均值之间没有差异的原假设");
+	outtextxy(10, 50, L"说明：可以拒绝均值之间没有差异的原假设的alpha水平越小，犯错的概率越小，意味着两组数据均值差异越大。如果在0.2的alpha水平下");
+	outtextxy(10, 65, L"仍无法拒绝原假设，则两组数据均值之间的差异非常小。一般如果能在0.05的alpha水平下拒绝原假设则认为证据是有力的");
+	outtextxy(280, 300, L"在0.1的alpha水平下，可以拒绝均值之间没有差异的原假设");
 	system("pause");
 	closegraph();
 }
@@ -1205,7 +1210,9 @@ void csvResult0point05() {
 	initgraph(1000, 600, 1);
 	HWND hn = GetHWnd();
 	SetWindowText(hn, L"可视化结果");
-	outtextxy(500, 300, L"在0.05的alpha水平下，可以拒绝均值之间没有差异的原假设");
+	outtextxy(10, 50, L"说明：可以拒绝均值之间没有差异的原假设的alpha水平越小，犯错的概率越小，意味着两组数据均值差异越大。如果在0.2的alpha水平下");
+	outtextxy(10, 65, L"仍无法拒绝原假设，则两组数据均值之间的差异非常小。一般如果能在0.05的alpha水平下拒绝原假设则认为证据是有力的");
+	outtextxy(280, 300, L"在0.05的alpha水平下，可以拒绝均值之间没有差异的原假设");
 	system("pause");
 	closegraph();
 }
@@ -1214,7 +1221,9 @@ void csvResult0point02() {
 	initgraph(1000, 600, 1);
 	HWND hn = GetHWnd();
 	SetWindowText(hn, L"可视化结果");
-	outtextxy(500, 300, L"在0.02的alpha水平下，可以拒绝均值之间没有差异的原假设");
+	outtextxy(10, 50, L"说明：可以拒绝均值之间没有差异的原假设的alpha水平越小，犯错的概率越小，意味着两组数据均值差异越大。如果在0.2的alpha水平下");
+	outtextxy(10, 65, L"仍无法拒绝原假设，则两组数据均值之间的差异非常小。一般如果能在0.05的alpha水平下拒绝原假设则认为证据是有力的");
+	outtextxy(280, 300, L"在0.02的alpha水平下，可以拒绝均值之间没有差异的原假设");
 	system("pause");
 	closegraph();
 }
@@ -1223,7 +1232,9 @@ void csvResult0point01() {
 	initgraph(1000, 600, 1);
 	HWND hn = GetHWnd();
 	SetWindowText(hn, L"可视化结果");
-	outtextxy(500, 300, L"在0.01的alpha水平下，可以拒绝均值之间没有差异的原假设");
+	outtextxy(10, 50, L"说明：可以拒绝均值之间没有差异的原假设的alpha水平越小，犯错的概率越小，意味着两组数据均值差异越大。如果在0.2的alpha水平下");
+	outtextxy(10, 65, L"仍无法拒绝原假设，则两组数据均值之间的差异非常小。一般如果能在0.05的alpha水平下拒绝原假设则认为证据是有力的");
+	outtextxy(280, 300, L"在0.01的alpha水平下，可以拒绝均值之间没有差异的原假设");
 	system("pause");
 	closegraph();
 }
@@ -1232,7 +1243,9 @@ void csvResult0point002() {
 	initgraph(1000, 600, 1);
 	HWND hn = GetHWnd();
 	SetWindowText(hn, L"可视化结果");
-	outtextxy(500, 300, L"在0.002的alpha水平下，可以拒绝均值之间没有差异的原假设");
+	outtextxy(10, 50, L"说明：可以拒绝均值之间没有差异的原假设的alpha水平越小，犯错的概率越小，意味着两组数据均值差异越大。如果在0.2的alpha水平下");
+	outtextxy(10, 65, L"仍无法拒绝原假设，则两组数据均值之间的差异非常小。一般如果能在0.05的alpha水平下拒绝原假设则认为证据是有力的");
+	outtextxy(280, 300, L"在0.002的alpha水平下，可以拒绝均值之间没有差异的原假设");
 	system("pause");
 	closegraph();
 }
@@ -1241,7 +1254,9 @@ void csvResult0point001() {
 	initgraph(1000, 600, 1);
 	HWND hn = GetHWnd();
 	SetWindowText(hn, L"可视化结果");
-	outtextxy(500, 300, L"在0.001的alpha水平下，可以拒绝均值之间没有差异的原假设");
+	outtextxy(10, 50, L"说明：可以拒绝均值之间没有差异的原假设的alpha水平越小，犯错的概率越小，意味着两组数据均值差异越大。如果在0.2的alpha水平下");
+	outtextxy(10, 65, L"仍无法拒绝原假设，则两组数据均值之间的差异非常小。一般如果能在0.05的alpha水平下拒绝原假设则认为证据是有力的");
+	outtextxy(280, 300, L"在0.001的alpha水平下，可以拒绝均值之间没有差异的原假设");
 	system("pause");
 	closegraph();
 }

@@ -155,12 +155,15 @@ int main() {
 				for (int i = 0; i < row.size();i++) {
 					const auto& column = row[i];
 
+					if (i % 10 == 0) {
+						cout << endl;
+					}
 					if (i == 0) {
 						cout << setw(20) << left << column;
 					}
 
 					else {
-						cout << setw(10) << left << column;
+						cout << setw(12) << left << column;
 					}
 
 				}
@@ -173,6 +176,9 @@ int main() {
 
 				for (int i = 0; i < row.size(); i++) {
 					const auto& column = row[i];
+					if (i % 10 == 0) {
+						cout << endl;
+					}
 					cout << setw(10) << left << column<<" ";
 
 				}
@@ -222,11 +228,11 @@ int main() {
 					const int n = s2 - s1;//样本量
 					double sumOfD = 0,sumOfDsquare=0;//差值之和、平方差之和
 					for (int i = s1; i <= s2; i++) {
-						score1.push_back(data[s0][i - 3]);
+						score1.push_back(data[s0-2][i - 3]);
 					}
 
 					for (int i = s3; i <= s4; i++) {
-						score2.push_back(data[s0][i - 3]);
+						score2.push_back(data[s0-2][i - 3]);
 					}
 
 					for (int i = 0; i < score1.size(); i++) {
@@ -236,7 +242,6 @@ int main() {
 
 					double t = (sumOfD / n) / (pow(((sumOfDsquare - (pow(sumOfD, 2) / n)) / (n * (n - 1))), 0.5));
 					checkT(t, n - 1);
-					break;
 				}
 
 				else {
